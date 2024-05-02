@@ -23,4 +23,15 @@ class Posts extends Model
     {
         return $this->belongsTo(User::class);
     }
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'post_id',
+        'user_id',
+        'post_name',
+        'post_description',
+    ];
 }
